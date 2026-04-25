@@ -1,0 +1,98 @@
+/* Scroll suave direto no CSS */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+  }
+  
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+  }
+  
+  nav a {
+    margin-left: 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: #38bdf8;
+  }
+  
+  /* SECTIONS */
+  .section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  /* CARDS */
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* BOTÕES */
+  button {
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* FORM */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+  }
+  
+  input, textarea {
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* BOTÃO TOPO */
+  #topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
