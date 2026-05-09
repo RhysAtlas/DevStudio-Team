@@ -5,8 +5,8 @@ html {
   
   body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #020617 0%, #0f172a 50%, #1e293b 100%);
     color: white;
   }
   
@@ -15,10 +15,18 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  
     padding: 15px 30px;
-    background: #020617;
+  
+    background: rgba(2, 6, 23, 0.7);
+  
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  
     position: sticky;
     top: 0;
+  
+    z-index: 1000;
   }
   
   nav a {
@@ -47,31 +55,53 @@ html {
     flex-wrap: wrap;
   }
   
+  
   .card {
-    background: #1e293b;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  
     padding: 20px;
-    border-radius: 10px;
-    width: 150px;
+    border-radius: 15px;
+    width: 260px;
+  
+    border: 1px solid rgba(255,255,255,0.1);
+  
     transition: 0.3s;
+  }
+
+  .card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+  }
+  
+  .card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #cbd5e1;
   }
   
   .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   }
   
   /* BOTÕES */
   button {
-    padding: 10px 20px;
-    background: #38bdf8;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
     border: none;
-    color: black;
+    color: white;
+    font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: 0.3s;
   }
   
   button:hover {
-    opacity: 0.8;
+    transform: scale(1.05);
+    opacity: 1;
   }
   
   /* FORM */
@@ -87,12 +117,36 @@ html {
     padding: 10px;
     border: none;
     border-radius: 5px;
+    background: #1e293b;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
   }
-  
   /* BOTÃO TOPO */
   #topBtn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
+  }
+  .section:nth-child(even) {
+    background: rgba(255,255,255,0.02);
+  }
+  .section {
+    padding: 80px 20px;
+    text-align: center;
+  
+    animation: fadeUp 1s ease;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
